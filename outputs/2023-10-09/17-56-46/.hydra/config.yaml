@@ -1,0 +1,28 @@
+logger:
+  project_name: AMP Oracle
+paths:
+  log: ./run
+  data: ${hydra:runtime.cwd}/data/
+  data_result: ${hydra:runtime.cwd}/data/data_gen
+params:
+  Neg_ratio_eq: 2
+  Neg_ratio: 1
+  seed: 123
+  device: cuda
+files: None
+datasets:
+  train_data1: D1
+  train_data2: D2
+  train_data3: D3
+  train_data177: D1-177
+  test_data: D2
+  split: Cluster
+oracles:
+  D1Target_Albert: D1_Target_NegR1.43_RFC500_AlBert
+  D2Target_Albert: D2_Target_NegR1.43_RFC500_AlBert
+  D1Target_T5: D1_Target_NegR1.43_RFC500_T5
+  D2Target_T5: D2_Target_NegR1.43_RFC500_T5
+  model_mlp: MLP
+  model_RF: RandomForest
+  method_Albert: Albert
+  method_T5: T5
