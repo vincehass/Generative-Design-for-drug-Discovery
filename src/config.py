@@ -40,15 +40,23 @@ class Datasets:
     split:str #["cluster", "title","target"]
 
 @dataclass
+class model:
+    model_mlp:str
+    model_RF:str
+    
+@dataclass
+class target:
+    target_T5:str
+    model_Albert:str
+
+
+@dataclass
 class Oracles:
     D1Target_Albert:str
     D1Target_Albert:str
     D1Target_T5:str
     D2Target_T5:str
-    model_mlp:str
-    model_RF:str
-    method_Albert:str
-    method_T5:str
+   
 
 
 @dataclass
@@ -60,5 +68,7 @@ class GALDConfig:
     datasets:Datasets
     oracles:Oracles
     logger:logger
+    model: model
+    target: target
 
     

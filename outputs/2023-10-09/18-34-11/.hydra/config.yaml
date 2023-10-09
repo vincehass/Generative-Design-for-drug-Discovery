@@ -1,0 +1,24 @@
+paths:
+  log: ./run
+  data: ${hydra:runtime.cwd}/data/
+  data_result: ${hydra:runtime.cwd}/data/data_gen
+params:
+  Neg_ratio_eq: 2
+  Neg_ratio: 1
+  seed: 123
+  device: cuda
+files: None
+datasets:
+  train_data1: D1
+  train_data2: D2
+  train_data3: D3
+  train_data177: D1-177
+  test_data: D2
+  split: Cluster
+oracles:
+- oracleAlbert
+logger:
+  experience_name: AMP Oracle with Random Forest
+model:
+- modelRF
+oracle: -oracleAlbert

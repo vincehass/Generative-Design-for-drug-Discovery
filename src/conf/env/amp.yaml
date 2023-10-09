@@ -1,0 +1,6 @@
+defaults:
+  - base
+
+_target_: AMP_D1
+
+

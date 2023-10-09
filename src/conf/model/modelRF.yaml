@@ -1,0 +1,3 @@
+  method:
+    - modelRF: RandomForest
+    - modeMLP: MLP

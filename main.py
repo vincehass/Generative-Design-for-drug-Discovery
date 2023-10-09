@@ -50,11 +50,11 @@ def main(cfg: GALDConfig)-> None:
                                   cfg,
                                   _recursive_=False,
                                   device = cfg.params.device,
-                                  oracle = cfg.oracles.method_Albert,
+                                  oracle = cfg.oracles,
                                   train_datset = cfg.datasets.train_data1,
                                   test_data = cfg.datasets.test_data,
                                   negative_ratio = cfg.params.Neg_ratio,
-                                  model = cfg.oracles.model_RF,
+                                  model = cfg.model,
                                   split_method = cfg.datasets.split
                                   )
     
